@@ -1,0 +1,25 @@
+@media (max-width: 750px) {
+    body {
+        height: 100vh; /* высота страницы */
+        margin: 0;
+        background-image: linear-gradient(to bottom, #0D0378 50%, #060136 50%); /* цвета фона */
+        background-size: 100% auto; /* change this line */
+       }
+       
+       /* добавляем возможность изменения высоты */
+       :root {
+        --top-height: 80vh; /* высота верхней части */
+       }
+       
+       body {
+        background-image: linear-gradient(to bottom, #0D0378 var(--top-height), #060136 var(--top-height));
+       }
+    .kontakt {
+        color: #ffffff;
+        position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       text-align: center;
+    }
+ }

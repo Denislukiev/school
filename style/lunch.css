@@ -1,0 +1,151 @@
+.text, .text1, .text2 {
+  color: #ffffff;
+}
+
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 767px) {
+  /* Здесь добавьте стили для мобильных устройств */
+  .text2 {
+    display: inline;
+    padding: 10px 19px;
+    border-radius: 0.5px;
+    position: absolute;
+  }
+  .text, .text1 {
+    display: inline;
+    padding: 0.5px 0.5px;
+    border-radius: 0.5px;
+    position: absolute;
+  }
+
+  .text {
+    left: 10px;
+    top: 20px;
+    font-weight: bold;
+  }
+
+  .text1 {
+    left: 10px;
+    top: 55px;
+    font-weight: bold;
+  }
+
+  .text2 {
+    left: 10px;
+    top: 100px;
+    font-weight: bold;
+  }
+  .changeTextButton {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s;
+  }
+
+  .changeTextButton:hover {
+    background-color: #0056b3;
+  }
+
+  .back-to-top {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s;
+  }
+
+  .back-to-top:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Стили для ПК */
+@media only screen and (min-width: 768px) {
+  /* Здесь добавьте стили для больших экранов (для ПК) */
+  
+  /* Стили для кнопки изменения текста */
+  .changeTextButton {
+    /* Фиксированное положение кнопки */
+    position: fixed;
+    /* Расстояние от верхнего края страницы */
+    top: 20px;
+    /* Расстояние от левого края страницы */
+    left: 50px;
+    /* Внутренние отступы кнопки */
+    padding: 10px 15px;
+    /* Цвет фона кнопки */
+    background-color: #007bff;
+    /* Цвет текста кнопки */
+    color: #fff;
+    /* Удаление подчеркивания текста */
+    text-decoration: none;
+    /* Радиус скругления кнопки */
+    border-radius: 5px;
+    /* Размер шрифта кнопки */
+    font-size: 20px;
+    /* Плавный переход цвета фона при наведении */
+    transition: background-color 0.3s;
+  }
+  .changeTextButton:hover {
+    background-color: #0056b3;
+  }
+
+  .text, .text1 {
+    padding: 10px 15px; /* Увеличиваем отступы текста */
+    border-radius: 5px; /* Увеличиваем радиус скругления */
+    font-size: 30px; /* Увеличиваем размер шрифта */
+    position: absolute;
+  }
+  .text2 {
+    padding: 15px 25px; /* Увеличиваем отступы текста */
+    border-radius: 5px; /* Увеличиваем радиус скругления */
+    font-size: 30px; /* Увеличиваем размер шрифта */
+    position: absolute;
+  }
+
+  .text {
+    left: 540px; /* Смещаем текст правее */
+    top: 120px; /* Смещаем текст ниже */
+    font-weight: bold;
+  }
+
+  .text1 {
+    left: 480px;
+    top: 150px;
+    font-weight: bold;
+  }
+
+  .text2 {
+    left: 430px;
+    top: 200px;
+    font-weight: bold;
+  }
+
+  .back-to-top {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+  }
+
+  .back-to-top:hover {
+    background-color: #0056b3;
+  }
+}

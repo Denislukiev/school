@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="menu-title">Меню</title>
+    <link rel="stylesheet" href="style/index_mobile.css">
+    <link rel="stylesheet" href="style/index_pc.css">
+    <link rel="stylesheet" href="style/index_top.css">
+    <link rel="stylesheet" href="style/index.css">
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="Логотип">
+      </div>
+      
+
+    <div class="transleding">
+        <button id="changeTextButton" class="changeTextButton"> English
+        </button>
+    </div>
+            <!-- Добавленный контейнер для кнопок меню -->
+    <div class="buttons-container">
+                <!-- Кнопка "Завтрак" -->
+                <button onclick="window.location.href='breakfast.html';" id="breakfast" class="menu-button">Завтрак</button>
+                <!-- Кнопка "Обед" -->
+                <button onclick="window.location.href='lunch.html';" id="lunch" class="menu-button">Обед</button>
+                <!-- Кнопка "полное меню" -->
+                <button onclick="window.location.href='poln.html';" id="poln" class="menu-button">Полное меню</button>
+    </div>
+    <div class="kontakt">
+                <h2 id="contacts">Контакты:</h2>
+                <h2>8 (812) 395-26-52</h2>
+                <h2>primschool-583@obr.gov.spb.ru</h2>
+    </div>
+    <script>
+            let translationFlag = false;
+            document.getElementById("changeTextButton").addEventListener("click", function() {
+                if (!translationFlag) {
+                    document.querySelectorAll("title").forEach(function(el) {
+                        el.textContent = "menu";
+                    });
+                    document.getElementById("breakfast").textContent = "breakfast";
+                    document.getElementById("lunch").textContent = "lunch";
+                    document.getElementById("poln").textContent = "Full menu";
+                    document.getElementById("contacts").textContent = "contacts:";
+                    translationFlag = true;
+            document.getElementById("changeTextButton").textContent = "Русский"; // изменяем текст кнопки
+        } else {
+            document.querySelectorAll("title").forEach(function(el) {
+                el.textContent = "меню";
+            });
+            document.getElementById("breakfast").textContent = "Завтрак";
+            document.getElementById("lunch").textContent = "Обед";
+            document.getElementById("poln").textContent = "Полное меню";
+            document.getElementById("contacts").textContent = "Контакты:";
+            translationFlag = false;
+        document.getElementById("changeTextButton").textContent = "English"; // изменяем текст кнопки
+    }
+});
+    </script>
+</body>
+</html>

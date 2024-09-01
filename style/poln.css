@@ -1,0 +1,43 @@
+/* Set white background color for body */
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0; /* Remove default margins */
+  }
+  /* Create grid container with black background */
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Set number and width of columns */
+    grid-template-rows: repeat(25, auto); /* Set row height based on content */
+    grid-gap: 5px; /* Set gap between grid cells */
+    background-color: rgb(14, 11, 11); /* Set grid container background color */
+    width: 100%; /* Set grid container width */
+    height: 100vh; /* Set grid container height to fill entire screen */
+  }
+  /* Style grid cells */
+  #grid-container > div {
+    background-color: rgb(255, 255, 255); /* Set grid cell background color */
+    color: rgb(0, 0, 0); /* Set grid cell text color */
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    font-size: 18px; /* Set font size */
+    padding: 0px; /* Remove internal padding */
+  }
+  .menu-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    color: black; /* Set button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    border: none; /* Remove borders */
+    /* Add animation properties */
+    background-image: linear-gradient(yellow);
+    background-size: 800% 800%;
+    animation: gradient 8s ease infinite alternate; /* Add alternate */
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }

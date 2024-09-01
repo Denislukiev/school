@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Lunch</title>
+    <link rel="stylesheet" href="style/lunch_mobile.css">
+    <link rel="stylesheet" href="style/lunch_pc.css">
+    <link rel="stylesheet" href="style/lunch.css">
+</head>
+<body>
+    <button onclick="window.location.href='index.html';" class="back-to-top">назад</button>
+    <button id="changeTextButton" class="changeTextButton">English</button>
+    <!-- Контент для обеда -->
+    <h2 class="text" id="lunch-button">Обед</h2>
+    <p class="text1" id="lunch">Список блюд для обеда:</p> <br><ol class="text2" id="lunch-list"><li>САЛАТ ИЗ МОРКОВИ И ЯБЛОК</li><li>РАССОЛЬНИК ЛЕНИНГРАДСКИЙ СО СМЕТАНОЙ</li><li>ГУЛЯШ</li><li>РИС ОТВАРНОЙ С ОВОЩАМИ</li><li>КИСЕЛЬ ИЗ КУРАГИ</li><li>БАТОН НАРЕЗНОЙ</li><li>ХЛЕБ РЖАНО-ПШЕНИЧНЫЙ</li></ol><br>
+    <div class="kontakt">
+        <h2 id="contacts">Контакты:</h2>
+        <h2>8 (812) 395-26-52</h2>
+        <h2>primschool-583@obr.gov.spb.ru</h2>
+    </div>
+    <script>
+        let translationFlag = false;
+
+        document.getElementById("changeTextButton").addEventListener("click", function() {
+            if (!translationFlag) {
+                document.title = "Lunch";
+                document.getElementById("lunch-button").textContent = "Lunch";
+                document.getElementById("lunch").textContent = "A list of lunch foods:";
+                document.getElementById("lunch-list").innerHTML = "<li>CARROT AND APPLE SALAD</li><li>LENINGRAD RASSOLNIK WITH SOUR CREAM</li><li>GOULASH</li><li>BOILED RICE WITH VEGETABLES</li><li>KISSEL FROM DRINKED DRAINS</li><li>LOAD SLICED</li><li>RYE-WHEAT BREAD</li>";
+                document.getElementById("contacts").textContent = "contacts:";
+                translationFlag = true;
+                document.getElementById("changeTextButton").textContent = "Русский"; // изменяем текст кнопки
+            } else {
+                document.title = "Обед";
+                document.getElementById("lunch-button").textContent = "Обед";
+                document.getElementById("lunch").textContent = "Список блюд для обеда:";
+                document.getElementById("lunch-list").innerHTML = "<li>САЛАТ ИЗ МОРКОВИ И ЯБЛОК</li><li>РАССОЛЬНИК ЛЕНИНГРАДСКИЙ СО СМЕТАНОЙ</li><li>ГУЛЯШ</li><li>РИС ОТВАРНОЙ С ОВОЩАМИ</li><li>КИСЕЛЬ ИЗ КУРАГИ</li><li>БАТОН НАРЕЗНОЙ</li><li>ХЛЕБ РЖАНО-ПШЕНИЧНЫЙ</li>";
+                document.getElementById("contacts").textContent = "Контакты:";
+                translationFlag = false;
+                document.getElementById("changeTextButton").textContent = "English"; // изменяем текст кнопки
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Breakfast</title>
+    <link rel="stylesheet" href="style/breakfast_mobile.css">
+    <link rel="stylesheet" href="style/breakfast_pc.css">
+    <link rel="stylesheet" href="style/breakfast.css">
+</head>
+<body>
+    <button onclick="window.location.href='index.html';" class="back-to-top">назад</button>
+    <button id="changeTextButton" class="changeTextButton">English</button>
+    <!-- Контент для завтрака -->
+    <h2 class="text" id="breakfast-button">Завтрак</h2>
+    <p class="text1" id="breakfast">Список блюд для завтрака:</p>
+    <ol class="text2" id="breakfast-list">
+        <li>КАША ЖИДКАЯ МОЛОЧНАЯ ПШЕНИЧНАЯ С МАСЛОМ СЛИВОЧНЫМ</li>
+        <li>ЧАЙ С ЛИМОНОМ</li>
+        <li>БАТОН НАРЕЗНОЙ</li>
+        <li>ПУДИНГ ИЗ ТВОРОГА С МОЛОКОМ СГУЩЕННЫМ</li>
+        <li>ЙОГУРТ М. Д. Ж. 2,5%</li>
+    </ol>
+    <div class="kontakt">
+        <h2 id="contacts">Контакты:</h2>
+        <h2>8 (812) 395-26-52</h2>
+        <h2>primschool-583@obr.gov.spb.ru</h2>
+    </div>
+    <script>
+        let translationFlag = false;
+        document.getElementById("changeTextButton").addEventListener("click", function() {
+            if (!translationFlag) {
+                document.title = "Breakfast"; // update page title
+                document.getElementById("breakfast-button").textContent = "Breakfast";
+                document.getElementById("breakfast").textContent = "A list of breakfast foods:";
+                document.getElementById("breakfast-list").innerHTML = "<li>LIQUID MILK WHEAT PORRIDGE WITH BUTTER</li><li>TEA WITH LEMON</li><li>LOAD SLICED</li><li>COOK PUDDING WITH CONDENSED MILK</li><li>YOGHURT M.D.J. 2.5%</li>";
+                document.getElementById("contacts").textContent = "contacts:";
+                translationFlag = true;
+                document.getElementById("changeTextButton").textContent = "Русский"; // update button text
+            } else {
+                document.title = "Завтрак"; // update page title
+                document.getElementById("breakfast-button").textContent = "Завтрак";
+                document.getElementById("breakfast").textContent = "Список блюд для завтрака:";
+                document.getElementById("breakfast-list").innerHTML = "<li>КАША ЖИДКАЯ МОЛОЧНАЯ ПШЕНИЧНАЯ С МАСЛОМ СЛИВОЧНЫМ</li><li>ЧАЙ С ЛИМОНОМ</li><li>БАТОН НАРЕЗНОЙ</li><li>ПУДИНГ ИЗ ТВОРОГА С МОЛОКОМ СГУЩЕННЫМ</li><li>ЙОГУРТ М. Д. Ж. 2,5%</li>";
+                document.getElementById("contacts").textContent = "Контакты:";
+                translationFlag = false;
+                document.getElementById("changeTextButton").textContent = "English"; // update button text
+            }
+        });
+    </script>
+</body>
+</html>
