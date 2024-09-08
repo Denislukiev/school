@@ -16,17 +16,6 @@
   background-color: #0056b3; /* Изменение цвета фона при наведении */
 }
 
-.logo {
-  position: absolute;
-  top: 10px; /* Расстояние от верхнего края страницы */
-  left: 10px; /* Расстояние от левого края страницы */
-}
-
-.logo img {
-  width: 200px; /* Ширина логотипа */
-  height: 200px; /* Высота логотипа */
-  border-radius: 50%; /* Круглый логотип */
-}
 
 /* Стили для desktop-версии */
 @media (min-width: 751px) {
@@ -42,12 +31,32 @@
     font-size: 18px; /* Размер шрифта */
     padding: 10px 20px; /* Размер кнопки */
   }
+
+  .logo {
+    position: absolute;
+    top: 10px; /* Расстояние от верхнего края страницы */
+    left: 10px; /* Расстояние от левого края страницы */
+  }
+  
+  .logo img {
+    width: 200px; /* Ширина логотипа */
+    height: 200px; /* Высота логотипа */
+    border-radius: 50%; /* Круглый логотип */
+  }
 }
 
 /* Стили для mobile-версии */
 @media (max-width: 750px) {
   .logo {
-    display: none;
+    position: absolute;
+    top: 3px; /* Расстояние от верхнего края страницы */
+    left: 3px; /* Расстояние от левого края страницы */
+  }
+  
+  .logo img {
+    width: 65px; /* Ширина логотипа */
+    height: 65px; /* Высота логотипа */
+    border-radius: 50%; /* Круглый логотип */
   }
 
   /* Контейнер для кнопок */
@@ -62,5 +71,37 @@
   .menu-button {
     width: 100%; /* Каждая кнопка занимает всю ширину контейнера */
     margin-right: 0; /* Убирает горизонтальный отступ между кнопками */
+  }
+}
+
+/* Стили для mobile-версии */
+@media (max-width: 720px) {
+  .kontakt {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 290px; /* задает высоту div */
+    font-size: 30px; /* задает размер шрифта текста внутри div */
+    padding: 5px; /* добавляет отступы внутри div */
+    box-sizing: border-box; /* добавлено свойство box-sizing */
+  }
+}
+
+/* Стили для mobile-версии */
+@media (max-width: 320px) {
+  .kontakt {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 150px; /* задает высоту div */
+    font-size: 14px; /* задает размер шрифта текста внутри div */
+    padding: 5px; /* добавляет отступы внутри div */
+    box-sizing: border-box; /* добавлено свойство box-sizing */
   }
 }
