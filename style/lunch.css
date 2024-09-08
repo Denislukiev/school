@@ -149,3 +149,36 @@
     background-color: #0056b3;
   }
 }
+
+
+/* Стили для mobile-версии */
+@media (max-width: 720px) {
+  .kontakt {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 290px; /* задает высоту div */
+    font-size: 30px; /* задает размер шрифта текста внутри div */
+    padding: 5px; /* добавляет отступы внутри div */
+    box-sizing: border-box; /* добавлено свойство box-sizing */
+  }
+}
+
+/* Стили для mobile-версии */
+@media (max-width: 320px) {
+  .kontakt {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 150px; /* задает высоту div */
+    font-size: 14px; /* задает размер шрифта текста внутри div */
+    padding: 5px; /* добавляет отступы внутри div */
+    box-sizing: border-box; /* добавлено свойство box-sizing */
+  }
+}
